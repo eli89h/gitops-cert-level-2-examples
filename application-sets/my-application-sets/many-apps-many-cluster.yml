@@ -19,6 +19,7 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
     spec:
+      project: '{{metadata.labels.environment}}'
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
