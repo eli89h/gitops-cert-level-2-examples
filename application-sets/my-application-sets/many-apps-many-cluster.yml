@@ -19,6 +19,11 @@ spec:
     metadata:
       name: '{{path.basename}}-{{name}}'
     spec:
+      syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
+        automated:
+          selfHeal: true
       project: '{{metadata.labels.environment}}'
       source:
         repoURL: https://github.com/eli89h/gitops-cert-level-2-examples.git
